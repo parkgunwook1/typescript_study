@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>키워드 분석 대시보드</title>
+</head>
+<body>
+    <script type="module" src="../../dist/main.js"></script>
+    <h1>키워드 분석</h1>
+
+    <!-- 키워드 생성 -->
+    <section>
+        <h2>키워드 생성 (GPT 기반)</h2>
+            <label for="generatePrompt">프롬프트 입력:</label>
+            <input type="text" id="generatePrompt" name="prompt" required>
+            <button id="generateBtn">생성 요청</button>
+        <div id="generateResult">
+            <!-- 결과 키워드 리스트 표시 영역 -->
+        </div>
+    </section>
+
+    <!-- 검색량 트렌드 -->
+    <section>
+        <h2>검색량 트렌드 조회</h2>
+            <label for="searchTrendPrompt">키워드 입력:</label>
+            <input type="text" id="searchTrendPrompt" name="prompt" required>
+            <button type="submit">검색</button>
+        <div id="searchTrendResult">
+            <!-- 검색 트렌드 결과 표시 영역 -->
+        </div>
+    </section>
+
+    <!-- 클릭 트렌드 -->
+    <section>
+        <h2>클릭 트렌드 조회</h2>
+            <label for="clickTrendPrompt">키워드 입력:</label>
+            <input type="text" id="clickTrendPrompt" name="prompt" required>
+            <button type="submit">조회</button>
+        <div id="clickTrendResult">
+            <!-- 클릭 트렌드 결과 표시 영역 -->
+        </div>
+    </section>
+
+    <!-- 인기 키워드 TOP -->
+    <section>
+        <h2>인기 키워드 TOP 100</h2>
+            <button type="submit">조회</button>
+        <div id="topKeywordsResult">
+            <!-- 인기 키워드 리스트 표시 영역 -->
+        </div>
+    </section>
+
+    <!-- 유사 키워드 (컨트롤러에 미구현이므로 링크만 추가) -->
+    <section>
+        <h2>유사 키워드 추천</h2>
+        <p>/keywords/similar 엔드포인트 구현 필요</p>
+            <label for="similarPrompt">키워드 입력:</label>
+            <input type="text" id="similarPrompt" name="prompt" required>
+            <button type="submit">추천 조회</button>
+        <div id="similarKeywordsResult">
+            <!-- 유사 키워드 결과 표시 영역 -->
+        </div>
+    </section>
+</body>
+</html>

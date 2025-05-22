@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+    "target": "ES2020",                 // JS 문법 버전
+    "module": "ESNext",                 // 모듈 방식 (브라우저용)
+    "moduleResolution": "bundler",     // import 경로 해석 방식
+    "outDir": "dist",                  // .js 출력 폴더
+    "rootDir": "./store/ts",                   // .ts 소스 폴더
+    "strict": true,                    // 타입 검사 강화
+    "esModuleInterop": true            // CommonJS 호환성 보장
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"]
+}
