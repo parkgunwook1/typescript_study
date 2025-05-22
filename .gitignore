@@ -120,3 +120,5 @@ dist
 #보안관련해서..
 package-lock.json
 package.json
+
+js_study/piano/img/

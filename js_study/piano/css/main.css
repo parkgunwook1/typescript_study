@@ -12,12 +12,17 @@ body {
   background-color: #fff;
 }
 
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #222;
+}
+
 /* Hero Section */
 .hero {
-  background-image: url('images/hero.jpg'); /* 실제 이미지 파일 추가 */
+  background-image: url('../img/hero.jpg'); /* 실제 경로로 교체 */
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 50vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -25,6 +30,60 @@ body {
   color: white;
   text-align: center;
 }
+
+/* Gallery 섹션과 유사한 Grid 스타일 */
+.info-section {
+  padding: 3rem 1.5rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+/* 3열 그리드 레이아웃 */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* 카드 스타일 */
+.info-card {
+  max-width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.info-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info-card p {
+  margin: 0.75rem 1rem 1rem;
+  font-size: 0. ninerem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* 반응형: 모바일에서 카드 폭 넓혀주기 */
+@media (max-width: 768px) {
+  .info-section .vehicle-pickup {
+    max-width: 90%;
+  }
+}
+
 
 .overlay {
   position: absolute;
@@ -64,18 +123,36 @@ body {
   background-color: #e69a2a;
 }
 
-/* Sections */
+/* Section Common */
 section {
   padding: 4rem 2rem;
   text-align: center;
 }
 
-.about p {
-  margin-top: 1rem;
-  font-size: 1.1rem;
+.features {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  font-weight: bold;
 }
 
-/* Curriculum */
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Curriculum Cards */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -103,14 +180,43 @@ section {
   font-style: italic;
 }
 
-.testimonials blockquote {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.testimonial-list blockquote {
+  font-size: 1.1rem;
+  margin: 1rem auto;
+  max-width: 600px;
 }
 
+.testimonial-list cite {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* FAQ */
+.faq details {
+  margin: 1rem auto;
+  max-width: 600px;
+  text-align: left;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.faq summary {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
 footer {
   background-color: #333;
   color: #fff;
   padding: 2rem;
   text-align: center;
+}
+
+footer a {
+  color: #ffd36b;
+  text-decoration: none;
 }
