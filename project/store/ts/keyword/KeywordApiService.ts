@@ -30,6 +30,26 @@ export class KeywordApiService {
     );
   }
 
+  // 인기 키워드 TOP 100을 가져온다.
+    async getSearchTrend(): Promise<KeywordVo[]> {
+        const response = await fetch(`${this.baseUrl}/search-trend`);
+        if (!response.ok) {
+            throw new Error("Failed to fetch search-trend keywords");
+        }
+
+        const data = await response.json();
+        const keywords: KeywordVo[] = data.map((item : any) => {
+            return new KeywordVo(
+                item.name,
+                item.rank,
+                item.category,
+                item.searchVolume,
+                item.clickVolume
+            )
+        });
+        return keywords;
+    }
+
     // 인기 키워드 TOP 100을 가져온다.
     async getTopKeywords(): Promise<KeywordVo[]> {
         const response = await fetch(`${this.baseUrl}/top`);
