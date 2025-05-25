@@ -19,7 +19,7 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero {
-  background-image: url('../img/hero.jpg'); /* 실제 경로로 교체 */
+  background-image: url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
   height: 50vh;
@@ -30,60 +30,6 @@ h1, h2, h3 {
   color: white;
   text-align: center;
 }
-
-/* Gallery 섹션과 유사한 Grid 스타일 */
-.info-section {
-  padding: 3rem 1.5rem;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.info-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: #222;
-  margin-bottom: 2rem;
-}
-
-/* 3열 그리드 레이아웃 */
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-}
-
-/* 카드 스타일 */
-.info-card {
-  max-width: 280px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  overflow: hidden;
-  text-align: center;
-  font-family: 'Noto Sans KR', sans-serif;
-}
-
-.info-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.info-card p {
-  margin: 0.75rem 1rem 1rem;
-  font-size: 0. ninerem;
-  color: #555;
-  line-height: 1.4;
-}
-
-/* 반응형: 모바일에서 카드 폭 넓혀주기 */
-@media (max-width: 768px) {
-  .info-section .vehicle-pickup {
-    max-width: 90%;
-  }
-}
-
 
 .overlay {
   position: absolute;
@@ -180,16 +126,32 @@ section {
   font-style: italic;
 }
 
-.testimonial-list blockquote {
-  font-size: 1.1rem;
-  margin: 1rem auto;
-  max-width: 600px;
+.testimonial-swiper {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.testimonial-list cite {
-  display: block;
-  margin-bottom: 1.5rem;
+.testimonial-swiper .swiper-slide {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  height: 320px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.testimonial-swiper blockquote {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-swiper cite {
   font-weight: bold;
+  color: #555;
 }
 
 /* FAQ */
@@ -219,4 +181,54 @@ footer {
 footer a {
   color: #ffd36b;
   text-decoration: none;
+}
+
+/* Info Section */
+.info-section {
+  padding: 3rem 1.5rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.info-card {
+  max-width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.info-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info-card p {
+  margin: 0.75rem 1rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .info-section .vehicle-pickup {
+    max-width: 90%;
+  }
 }
